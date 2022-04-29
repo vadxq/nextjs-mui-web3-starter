@@ -1,14 +1,12 @@
 // ** React Imports
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const UserLayout = ({ children }: Props) => {
-  return (
-    <>{children}</>
-  )
-}
+  return <>{children}</>;
+};
 
-export default UserLayout
+export default UserLayout;

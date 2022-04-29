@@ -1,5 +1,5 @@
 // ** MUI Imports
-import { Theme } from '@mui/material/styles'
+import { Theme } from '@mui/material/styles';
 
 const GlobalStyles = (theme: Theme) => {
   return {
@@ -12,10 +12,10 @@ const GlobalStyles = (theme: Theme) => {
         width: '100%',
         zIndex: 2000,
         position: 'fixed',
-        backgroundColor: theme.palette.primary.main
-      }
-    }
-  }
-}
+        backgroundColor: theme.palette.primary.main,
+      },
+    },
+  };
+};
 
-export default GlobalStyles
+export default GlobalStyles;

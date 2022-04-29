@@ -1,17 +1,15 @@
 // ** MUI Theme Provider
-import { ThemeOptions } from '@mui/material'
-import { deepmerge } from '@mui/utils'
-
-// ** Type Import
-import { Settings } from '../context/settingsContext'
+import { ThemeOptions } from '@mui/material';
+import { deepmerge } from '@mui/utils';
 
 // ** Theme Override Imports
-import palette from './palette'
-import breakpoints from './breakpoints'
+import { Settings } from '../context/settingsContext';
+import breakpoints from './breakpoints';
+import palette from './palette';
 
 const themeOptions = (settings: Settings): ThemeOptions => {
   // ** Vars
-  const { mode } = settings
+  const { mode } = settings;
 
   const themeConfig = {
     palette: palette(mode),
@@ -27,21 +25,21 @@ const themeOptions = (settings: Settings): ThemeOptions => {
         ' "Noto Sans"',
         '"Noto Sans CJK SC"',
         '"Microsoft YaHei"',
-        'sans-serif'
-      ].join(',')
+        'sans-serif',
+      ].join(','),
     },
     breakpoints: breakpoints(),
     shape: {
-      borderRadius: 6
+      borderRadius: 6,
     },
     mixins: {
       toolbar: {
-        minHeight: 64
-      }
-    }
-  }
+        minHeight: 64,
+      },
+    },
+  };
 
-  return deepmerge(themeConfig, {})
-}
+  return deepmerge(themeConfig, {});
+};
 
-export default themeOptions
+export default themeOptions;
