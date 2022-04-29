@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
+  const { t } = useTranslation('common');
   return (
     <div>
       <Head>
@@ -11,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main>{t('hello')}</main>
 
       <footer>
         <a
@@ -28,5 +31,11 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
 
 export default Home;

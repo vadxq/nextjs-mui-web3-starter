@@ -5,6 +5,7 @@ import type { EmotionCache } from '@emotion/cache';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import type { NextPage } from 'next';
+import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 
 import { SettingsConsumer, SettingsProvider } from '../context/settingsContext';
@@ -47,4 +48,4 @@ function MyApp({
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
