@@ -1,11 +1,23 @@
+import { useState } from 'react';
+
+import { Button } from '@mui/material';
 import type { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { getAccount } from '../utils/metamask';
+
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
+  const [data, setData] = useState<string[]>([]);
+  const handleClick = async () => {
+    const res: string[] = await getAccount();
+    console.log(res);
+    setData(res);
+  };
+
   return (
     <div>
       <Head>
@@ -15,6 +27,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>{t('hello')}</main>
+      <Button onClick={handleClick}>click</Button>
+      <p>{data}</p>
 
       <footer>
         <a
