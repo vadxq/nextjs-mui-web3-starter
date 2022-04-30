@@ -3,7 +3,7 @@ import { ThemeOptions } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 
 // ** Theme Override Imports
-import { Settings } from '../context/settingsContext';
+import { Settings } from '../contexts/setting';
 import breakpoints from './breakpoints';
 import palette from './palette';
 

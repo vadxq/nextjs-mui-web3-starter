@@ -12,7 +12,7 @@ import {
 
 // ** Theme Imports
 import themeConfig from '../configs/theme';
-import { Settings } from '../context/settingsContext';
+import { Settings } from '../contexts/setting';
 import GlobalStyling from './globalStyles';
 import overrides from './overrides';
 import themeOptions from './themeOptions';

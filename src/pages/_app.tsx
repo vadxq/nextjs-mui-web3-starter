@@ -8,8 +8,8 @@ import type { NextPage } from 'next';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 
-import { SettingsConsumer, SettingsProvider } from '../context/settingsContext';
-import Layout from '../layouts';
+import Layout from '../components/layouts';
+import { SettingsConsumer, SettingsProvider } from '../contexts/setting';
 import ThemeComponent from '../themes';
 
 // @emotion/cache
