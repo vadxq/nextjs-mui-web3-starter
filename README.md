@@ -25,7 +25,14 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - /contexts
 - /layouts
 - /pages
-- /pages/aps
+- /pages/apis
 - /styles
 - /themes
 - /utils
+
+## TODO
+
+- [ ] add serverless
+- [ ] readme
+- [ ] web3
+- [ ] solidity compiler
